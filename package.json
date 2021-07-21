@@ -1,0 +1,24 @@
+{
+  "name": "spades-dev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MetalOoze05/spades-dev.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MetalOoze05/spades-dev/issues"
+  },
+  "homepage": "https://github.com/MetalOoze05/spades-dev#readme",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "discord.js": "^13.0.0-dev.07017a9.1626869177",
+    "ms": "^2.1.3"
+  }
+}
