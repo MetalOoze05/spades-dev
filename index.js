@@ -3,7 +3,8 @@ const discord = require('discord.js');
 const chalk = require('chalk');
 
 const client = new discord.Client({
-    intents: new discord.Intents(discord.Intents.All)
+    intents: new discord.Intents(discord.Intents.All),
+    fetchAllMembers: false
 });
 
 client.on('ready', () => {
