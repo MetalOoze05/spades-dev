@@ -1,15 +1,13 @@
 const config = require('./config.json');
-const discord = require('discord.js');
+const Discord = require('discord.js');
 const chalk = require('chalk');
 
-const client = new discord.Client({
-    intents: new discord.Intents(discord.Intents.All),
+const client = new Discord.Client({
+    intents: new Discord.Intents(Discord.Intents.All),
     fetchAllMembers: false
 });
 
-client.on('ready', () => {
-    console.log(chalk.magenta(`Logged in as ${client.user.username}`))
-    client.user.setActivity("Spades#5300", { type: 'WATCHING' })
-});
+require('./handler/command')(client)
+require('./handler/event')(client)
 
 client.login(config.token);
