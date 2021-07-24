@@ -7,7 +7,8 @@ const client = new Discord.Client({
     fetchAllMembers: false
 });
 
+require('dotenv').config()
 require('./handler/command')(client)
 require('./handler/event')(client)
 
-client.login(config.token);
+client.login(process.env.token);
