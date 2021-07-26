@@ -25,14 +25,12 @@ module.exports = {
         }
     ],
     async execute(interaction, client, args) {
-        let VIP = ["733608333575192606", "331005037062914050", "508865773360381952", "793176838083444796"]
-        
-        if (!VIP.includes(interaction.member.id)) {
-            return interaction.reply({
-                content: "Sorry but only VIPs can use it!",
-                ephemeral: true
-            })
-        };
+        if (!interaction.member.permissions.has(Discord.Permissions.FLAGS.MANAGE_GUILD)) {
+           return interaction.reply({
+               content: "Sorry but you don't have enough permissions to use this command!",
+               ephemeral: true
+           })
+        }
 
         let channel = interaction.guild.channels.cache.get(args[0].value);
         let title = args[1].value
